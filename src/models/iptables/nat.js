@@ -17,7 +17,7 @@ class Nat {
 
   async getNatList() {
     try {
-      this.natList = await connexion.query("SELECT idNat, nameNat, port, type FROM nat_rules");
+      this.natList = await connexion.query("SELECT idNat, name,ipAddressSrc, portSrc, ipAddressDst, portDst, type FROM nat_rules");
 
       return this.natList;
     }
