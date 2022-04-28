@@ -6,7 +6,7 @@ var options = {};
 class DbMariaDB {
   constructor() { 
     options = {
-      host: 'localhost',
+      host: '127.0.0.1',
       user: 'websiteaccount',
       password: 'passwordDbUniv01',
       database: 'voyage',
