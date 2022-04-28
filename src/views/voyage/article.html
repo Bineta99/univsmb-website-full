@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-<h2> Artciles </h2>
+<h2> Articles </h2>
 
 
 
@@ -22,7 +22,7 @@
                 <div class="bg-white p-2">
                     {% for row in items %}
                     <div id="card-image-div">
-                        <img src="/images/plan.jpg" alt="">
+                        <img src="/images/{{row.image}}" alt="">
                     </div>
 
                     <div class="mt-5">
@@ -37,8 +37,12 @@
 
                 </div>
                
-
+       
                 <div class="bg-light p-2">
+
+                    <div class="mt-2 text-right">
+                        <button class="btn btn-primary btn-sm shadow-none" type="submit">Reserver</button>
+                    </div>
                 
                     <h2> <strong>Comment</strong> </h2>
                     <hr>
