@@ -5,7 +5,7 @@ var templateEngine = require('nunjucks');
 var app = module.exports = express();
 
 const N_PORT = 3000;
-const N_LISTEN = '192.168.1.219';
+const N_LISTEN = '192.168.56.102';
 
 app.set('view cache', false);
 
@@ -15,17 +15,9 @@ templateEngine.configure('views', {
     express: app
 });
 
-var start = require('./controllers/iptables/nat');
-app.get('/', start.render);
 
-var alias = require('./controllers/iptables/alias');
-app.get('/alias', alias.render);
-
-var nat = require('./controllers/iptables/nat');
-app.get('/nat', nat.render);
-
-
-
+var articles = require('./controllers/voyage/AllArticles');
+app.get('/', articles.render);
 
 var articles = require('./controllers/voyage/AllArticles');
 app.get('/articles', articles.render);

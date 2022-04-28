@@ -9,7 +9,7 @@ class DbMariaDB {
       host: 'localhost',
       user: 'websiteaccount',
       password: 'passwordDbUniv01',
-      database: 'webiptables',
+      database: 'voyage',
       allowPublicKeyRetrieval: true
     };
   }
