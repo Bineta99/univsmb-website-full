@@ -5,7 +5,7 @@ var templateEngine = require('nunjucks');
 var app = module.exports = express();
 
 const N_PORT = 3000;
-const N_LISTEN = 'localhost';
+const N_LISTEN = '192.168.1.219';
 
 app.set('view cache', false);
 
@@ -24,7 +24,33 @@ app.get('/alias', alias.render);
 var nat = require('./controllers/iptables/nat');
 app.get('/nat', nat.render);
 
+
+
+
+var articles = require('./controllers/voyage/AllArticles');
+app.get('/articles', articles.render);
+
+var article = require('./controllers/voyage/article');
+app.get('/article/:id', article.render);
+
+
+
+
+
+
+
+
+
+var filter = require('./controllers/iptables/filter');
+app.get('/filter', filter.render);
+
+
+
+
 // Routes statiques
+
+app.use('/images', express.static(__dirname+'/views/images/'));
+
 app.use('/css/bootstrap.min.css', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css'));
 app.use('/css/bootstrap.min.css.map', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css.map'));
 app.use('/css/bootstrap-themes/', express.static('node_modules/bootstrap-themes/dist/'));

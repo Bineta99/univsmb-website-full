@@ -6,10 +6,11 @@ var options = {};
 class DbMariaDB {
   constructor() { 
     options = {
-      host: '127.0.0.1',
+      host: 'localhost',
       user: 'websiteaccount',
       password: 'passwordDbUniv01',
-      database: 'webiptables'
+      database: 'webiptables',
+      allowPublicKeyRetrieval: true
     };
   }
 

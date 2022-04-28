@@ -4,7 +4,7 @@
 
 If you clone this repository you need change the name of the Github account below :
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Bineta99/univsmb-website-full)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/lRita250/univsmb-website-full)
 
 ## Setup 
 
@@ -43,3 +43,4 @@ To start the application, go in your Terminal, change your directory for src, an
 To start the application, go in your Terminal, change your directory for src, and enter this command :
 
  `npm run watch`
+# mini_projet2022

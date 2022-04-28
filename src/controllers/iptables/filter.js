@@ -1,12 +1,12 @@
-
-var Nat = require('../../models/iptables/nat');
+var Filter = require('../../models/iptables/filter');
 
 exports.render = async function (req, res) {
-  var defaultComponent = new Nat(req, res);
+  var defaultComponent = new Filter(req, res);
 
   await defaultComponent.initialize();
   
-  var natList = await defaultComponent.getNatList();
+  var filterList = await defaultComponent.getFilterList();
 
-  res.render('tmpl/filter.html', { items: natList});
+  res.render('tmpl/rules_filter.html', { items: filterList});
 }
+
