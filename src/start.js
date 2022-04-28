@@ -5,9 +5,6 @@ var templateEngine = require('nunjucks');
 var app = module.exports = express();
 
 const N_PORT = 3000;
-
-const N_LISTEN = '192.168.56.102';
-=======
 const N_LISTEN = 'localhost';
 
 
