@@ -5,7 +5,7 @@ var templateEngine = require('nunjucks');
 var app = module.exports = express();
 
 const N_PORT = 3000;
-const N_LISTEN = 'localhost';
+const N_LISTEN = '127.0.0.1';
 
 
 app.set('view cache', false);
