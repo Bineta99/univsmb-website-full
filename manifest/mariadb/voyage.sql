@@ -16,7 +16,7 @@ CREATE TABLE `voyage`.`articles` (
 -- Déchargement des données de la table `articles`
 --
 
-INSERT INTO `voyage`.`articles` (`id`, `title`, `body`, `image`) VALUES
+INSERT INTO `voyage`.`articles` (`id`, `continents`, `body`, `image`) VALUES
 (1, 'Le Monde.fr - Actualités et Infos en France et dans le monde', 'Le Monde.fr - 1er site d’information. Les articles du journal et toute l’actualité en continu : International, France, Société, Economie, Culture, Environnement, Blogs ...', 'plan.jpg'),
 (2, 'Le Monde.fr - Actualités et Infos en France et dans le monde', 'Le Monde.fr - 1er site d’information. Les articles du journal et toute l’actualité en continu : International, France, Société, Economie, Culture, Environnement, Blogs ...', 'plan.jpg'),
 (3, 'Le Monde.fr - Actualités et Infos en France et dans le monde', 'Le Monde.fr - 1er site d’information. Les articles du journal et toute l’actualité en continu : International, France, Société, Economie, Culture, Environnement, Blogs ...', ''),
