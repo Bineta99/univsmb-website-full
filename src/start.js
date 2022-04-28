@@ -5,11 +5,11 @@ var templateEngine = require('nunjucks');
 var app = module.exports = express();
 
 const N_PORT = 3000;
-<<<<<<< HEAD
+
 const N_LISTEN = '192.168.56.102';
 =======
 const N_LISTEN = 'localhost';
->>>>>>> 6cb795b19114227d63a270c0a116f5c35482b2dc
+
 
 app.set('view cache', false);
 
