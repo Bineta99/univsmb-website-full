@@ -1,0 +1,80 @@
+{% extends 'voyage/layout.html' %}
+
+{% block title %}Accueil{% endblock %}
+{% block breadcrumb %} Article > {{items[0].id}} {% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+<h2> Artciles </h2>
+
+
+
+<div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-8">
+            <div class="d-flex flex-column comment-section">
+                <div class="bg-white p-2">
+                    {% for row in items %}
+                    <div id="card-image-div">
+                        <img src="/images/plan.jpg" alt="">
+                    </div>
+
+                    <div class="mt-5">
+                        <h3> <strong> {{ row.title }} </strong> </h3>
+                    </div>
+
+                    <div class="mt-4">
+                        <p class="comment-text"> {{row.body }} </p>
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+               
+
+                <div class="bg-light p-2">
+                
+                    <h2> <strong>Comment</strong> </h2>
+                    <hr>
+
+                    {% for row in comments %}
+                    <div class="d-flex flex-row align-items-start m-2">
+                        <img class="rounded-circle" src="https://www.clipartmax.com/png/middle/363-3636751_staff-photo-unavailable-avatar-html.png" width="40">
+                        <p class="ml-1 shadow-none"> {{ row.comment }} </p>
+                    </div>
+                    
+                    {% endfor %}
+
+                    <form action="article" method="post">
+                        <div class="d-flex flex-row align-items-start">
+                            <textarea class="form-control ml-1 shadow-none textarea"></textarea>
+                        </div>
+                        <div class="mt-2 text-right">
+                            <button class="btn btn-primary btn-sm shadow-none" type="submit">Post comment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{ comments[0] }}
+<!--
+{% for row in items %}
+
+<div class="alert alert-primary" role="alert">
+    <strong>Le {{ row.nameNat }} - {{ row.ipAddress }}</strong>
+    <br />{{ row.port }}
+</div>
+
+{% endfor %}
+-->
+{% endblock %}
